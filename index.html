@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño y Programación SAM</title>
+    <meta name="description"
+      content="Programa de estudios de Diseño y Programación Web del IESTP SAM. Información completa sobre competencias, módulos y oportunidades laborales.">
+    <meta name="keywords"
+      content="diseño web, programación web, IESTP SAM, desarrollo web, programa de estudios">
+    <link rel="stylesheet" href="ind.css">
+
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>Diseño y Programación SAM</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+          <li><a href="#programa" onclick="closeMenu()">Programa</a></li>
+          <li><a href="#competencias"
+              onclick="closeMenu()">Competencias</a></li>
+          <li><a href="#modulos" onclick="closeMenu()">Módulos</a></li>
+          <li><a href="#oportunidades"
+              onclick="closeMenu()">Oportunidades</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>Diseño y Programación SAM</h1>
+        <h2>Programa de Estudios de Diseño y Programación Web</h2>
+        <p>Instituto de Educación Superior Tecnológico Público SAM</p>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Módulos Formativos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Semestres Académicos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Tecnología Actual</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Description -->
+    <section id="programa">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-number">01</div>
+          <h3 class="section-title">¿Qué es el Programa?</h3>
+        </div>
+
+        <div class="glass-card">
+          <h4>🎓 Descripción del Programa</h4>
+          <p>El programa de estudios de <strong>Diseño y Programación
+              Web</strong> forma profesionales técnicos con sólidos
+            conocimientos en la creación de sitios y sistemas basados en
+            tecnología web, enfocándose en interfaces funcionales, interactivas
+            y responsivas que se adapten a las necesidades actuales del mercado
+            digital.</p>
+
+          <div class="tech-tags">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h4>🎯 Objetivo General</h4>
+          <p>Formar profesionales técnicos capaces de diseñar, desarrollar e
+            implementar soluciones web completas, utilizando las últimas
+            tecnologías y metodologías de desarrollo, con enfoque en la
+            experiencia de usuario y la optimización de rendimiento.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="glass-card">
+            <h4>⚡ Ventajas Competitivas</h4>
+            <ul>
+              <li>Metodología práctica con proyectos reales</li>
+              <li>Tecnologías actualizadas del mercado</li>
+              <li>Enfoque en UX/UI Design</li>
+              <li>Desarrollo Full Stack</li>
+              <li>Preparación para certificaciones</li>
+            </ul>
+          </div>
+
+          <div class="glass-card">
+            <h4>🌟 Perfil del Egresado</h4>
+            <ul>
+              <li>Desarrollador Front-end especializado</li>
+              <li>Diseñador de interfaces web</li>
+              <li>Programador Full Stack</li>
+              <li>Consultor en experiencia digital</li>
+              <li>Emprendedor tecnológico</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competencias Section -->
+    <section id="competencias">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-number">02</div>
+          <h3 class="section-title">Competencias Profesionales</h3>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active"
+            onclick="openTab(event, 'competencia1')">
+            <span>Competencia 1</span>
+          </button>
+          <button class="tab-btn" onclick="openTab(event, 'competencia2')">
+            <span>Competencia 2</span>
+          </button>
+          <button class="tab-btn" onclick="openTab(event, 'competencia3')">
+            <span>Competencia 3</span>
+          </button>
+        </div>
+
+        <div id="competencia1" class="tab-content active">
+          <div class="glass-card">
+            <h4>🎨 Diseño de Interfaces Web</h4>
+            <p>Planificar, crear y evaluar interfaces web que garanticen una
+              experiencia de usuario óptima, aplicando principios de usabilidad,
+              accesibilidad y diseño visual contemporáneo.</p>
+
+            <div class="grid grid-3">
+              <div class="glass-card">
+                <h5>📐 Fundamentos de Diseño</h5>
+                <ul>
+                  <li>Teoría del color y tipografía</li>
+                  <li>Composición y layout</li>
+                  <li>Sistemas de grillas</li>
+                  <li>Principios de UX/UI</li>
+                </ul>
+              </div>
+
+              <div class="glass-card">
+                <h5>🎯 Herramientas de Diseño</h5>
+                <ul>
+                  <li>Adobe Creative Suite</li>
+                  <li>Figma / Sketch</li>
+                  <li>Prototipado interactivo</li>
+                  <li>Wireframing avanzado</li>
+                </ul>
+              </div>
+
+              <div class="glass-card">
+                <h5>📱 Diseño Responsivo</h5>
+                <ul>
+                  <li>Mobile First Design</li>
+                  <li>Breakpoints estratégicos</li>
+                  <li>Optimización para dispositivos</li>
+                  <li>Progressive Web Apps</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="competencia2" class="tab-content">
+          <div class="glass-card">
+            <h4>💻 Desarrollo de Aplicaciones Web</h4>
+            <p>Desarrollar aplicaciones web dinámicas e interactivas utilizando
+              lenguajes de programación, frameworks y tecnologías actuales del
+              desarrollo web moderno.</p>
+
+            <div class="grid grid-3">
+              <div class="glass-card">
+                <h5>🌐 Frontend Development</h5>
+                <ul>
+                  <li>HTML5 semántico</li>
+                  <li>CSS3 y preprocesadores</li>
+                  <li>JavaScript ES6+</li>
+                  <li>Frameworks modernos (React, Vue)</li>
+                </ul>
+              </div>
+
+              <div class="glass-card">
+                <h5>⚙️ Backend Development</h5>
+                <ul>
+                  <li>Node.js y Express</li>
+                  <li>PHP y frameworks</li>
+                  <li>APIs RESTful</li>
+                  <li>Microservicios</li>
+                </ul>
+              </div>
+
+              <div class="glass-card">
+                <h5>🗄️ Bases de Datos</h5>
+                <ul>
+                  <li>MySQL / PostgreSQL</li>
+                  <li>MongoDB (NoSQL)</li>
+                  <li>Optimización de consultas</li>
+                  <li>Modelado de datos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="competencia3" class="tab-content">
+          <div class="glass-card">
+            <h4>🚀 Gestión y Optimización Web</h4>
+            <p>Implementar, mantener y optimizar sitios web, aplicando buenas
+              prácticas de rendimiento, seguridad y posicionamiento en motores
+              de búsqueda.</p>
+
+            <div class="grid grid-3">
+              <div class="glass-card">
+                <h5>🔧 DevOps Básico</h5>
+                <ul>
+                  <li>Control de versiones (Git)</li>
+                  <li>Deployment automatizado</li>
+                  <li>Hosting y dominios</li>
+                  <li>Monitoreo de aplicaciones</li>
+                </ul>
+              </div>
+
+              <div class="glass-card">
+                <h5>⚡ Optimización</h5>
+                <ul>
+                  <li>Performance web</li>
+                  <li>SEO técnico</li>
+                  <li>Compresión de recursos</li>
+                  <li>Lazy loading</li>
+                </ul>
+              </div>
+
+              <div class="glass-card">
+                <h5>🔒 Seguridad Web</h5>
+                <ul>
+                  <li>Autenticación y autorización</li>
+                  <li>Prevención de vulnerabilidades</li>
+                  <li>HTTPS y certificados</li>
+                  <li>Backup y recuperación</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Módulos Section -->
+    <section id="modulos">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-number">03</div>
+          <h3 class="section-title">Módulos Formativos</h3>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="module">
+            <div class="module-number">MÓDULO 01</div>
+            <h4>Diseño Digital y Fundamentos Web</h4>
+            <p>Desarrollo de competencias en diseño visual, experiencia de
+              usuario y fundamentos de tecnologías web.</p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">Adobe Creative Suite</span>
+              <span class="tech-tag">Figma</span>
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+            </div>
+
+            <ul>
+              <li>Fundamentos del Diseño Digital</li>
+              <li>Experiencia de Usuario (UX)</li>
+              <li>Interfaz de Usuario (UI)</li>
+              <li>Maquetación Web con HTML y CSS</li>
+              <li>Diseño Responsivo</li>
+              <li>Herramientas de Prototipado</li>
+            </ul>
+
+            <div
+              style="margin-top: 1.5rem; padding: 1rem; background: rgba(255, 215, 0, 0.1); border-radius: 15px; border-left: 4px solid var(--gold);">
+              <strong>Duración:</strong> 2 Semestres •
+              <strong>Certificación:</strong> Auxiliar en Diseño Digital
+            </div>
+          </div>
+
+          <div class="module">
+            <div class="module-number">MÓDULO 02</div>
+            <h4>Desarrollo de Aplicaciones Web</h4>
+            <p>Formación en programación web, desarrollo de aplicaciones
+              interactivas y manejo de bases de datos.</p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+
+            <ul>
+              <li>Programación con JavaScript</li>
+              <li>Frameworks Frontend (React/Vue)</li>
+              <li>Desarrollo Backend</li>
+              <li>Bases de Datos Relacionales</li>
+              <li>APIs y Servicios Web</li>
+              <li>Integración de Sistemas</li>
+            </ul>
+
+            <div
+              style="margin-top: 1.5rem; padding: 1rem; background: rgba(0, 212, 255, 0.1); border-radius: 15px; border-left: 4px solid var(--primary-blue);">
+              <strong>Duración:</strong> 2 Semestres •
+              <strong>Certificación:</strong> Técnico en Desarrollo Web
+            </div>
+          </div>
+
+          <div class="module">
+            <div class="module-number">MÓDULO 03</div>
+            <h4>Gestión y Optimización de Proyectos Web</h4>
+            <p>Especialización en gestión de proyectos web, optimización de
+              rendimiento y emprendimiento digital.</p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">DevOps</span>
+              <span class="tech-tag">SEO</span>
+              <span class="tech-tag">Analytics</span>
+              <span class="tech-tag">Cloud</span>
+            </div>
+
+            <ul>
+              <li>Gestión de Proyectos Digitales</li>
+              <li>Optimización de Rendimiento</li>
+              <li>SEO y Marketing Digital</li>
+              <li>Seguridad Web</li>
+              <li>Cloud Computing</li>
+              <li>Emprendimiento Digital</li>
+            </ul>
+
+            <div
+              style="margin-top: 1.5rem; padding: 1rem; background: rgba(0, 255, 255, 0.1); border-radius: 15px; border-left: 4px solid var(--electric-blue);">
+              <strong>Duración:</strong> 2 Semestres •
+              <strong>Certificación:</strong> Profesional Técnico
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <h4>🎓 Título Profesional</h4>
+            <p>Al completar exitosamente los 3 módulos formativos, el estudiante
+              obtiene el título de:</p>
+            <div
+              style="text-align: center; padding: 2rem; background: linear-gradient(135deg, var(--gold), var(--primary-blue)); border-radius: 20px; margin: 1.5rem 0; color: var(--black); font-weight: bold; font-size: 1.2rem;">
+              PROFESIONAL TÉCNICO EN DISEÑO Y PROGRAMACIÓN WEB
+            </div>
+            <p>Título otorgado por el Instituto de Educación Superior
+              Tecnológico Público SAM, con reconocimiento oficial del Ministerio
+              de Educación.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Oportunidades Section -->
+    <section id="oportunidades">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-number">04</div>
+          <h3 class="section-title">Oportunidades Laborales</h3>
+        </div>
+
+        <div class="glass-card">
+          <h4>💼 Campo Laboral</h4>
+          <p>Los egresados del programa pueden desempeñarse en diversos sectores
+            de la economía digital, desde startups tecnológicas hasta grandes
+            corporaciones, agencias de publicidad y como emprendedores
+            independientes.</p>
+        </div>
+
+        <div class="job-grid">
+          <div class="job-card">
+            <div class="job-icon">🎨</div>
+            <span>Diseñador UX/UI</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">💻</div>
+            <span>Desarrollador Frontend</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">⚙️</div>
+            <span>Desarrollador Backend</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🔄</div>
+            <span>Desarrollador Full Stack</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">📱</div>
+            <span>Desarrollador Mobile</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🚀</div>
+            <span>DevOps Engineer</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">📊</div>
+            <span>Analista Web</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🎯</div>
+            <span>Especialista SEO</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🏢</div>
+            <span>Consultor Digital</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">💡</div>
+            <span>Emprendedor Tech</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🎬</div>
+            <span>Diseñador Multimedia</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🌐</div>
+            <span>Webmaster</span>
+          </div>
+        </div>
+
+        <div class="grid grid-2" style="margin-top: 3rem;">
+          <div class="glass-card">
+            <h4>💰 Perspectivas Salariales</h4>
+            <ul>
+              <li><strong>Desarrollador Junior:</strong> S/. 2,500 - S/.
+                4,000</li>
+              <li><strong>Desarrollador Semi-Senior:</strong> S/. 4,000 - S/.
+                6,500</li>
+              <li><strong>Desarrollador Senior:</strong> S/. 6,500 - S/.
+                10,000+</li>
+              <li><strong>Freelancer Especializado:</strong> S/. 3,000 - S/.
+                8,000+</li>
+              <li><strong>Líder Técnico:</strong> S/. 8,000 - S/. 15,000+</li>
+            </ul>
+          </div>
+
+          <div class="glass-card">
+            <h4>🌍 Modalidades de Trabajo</h4>
+            <ul>
+              <li><strong>Presencial:</strong> Oficinas corporativas y
+                agencias</li>
+              <li><strong>Remoto:</strong> Trabajo desde casa</li>
+              <li><strong>Híbrido:</strong> Combinación flexible</li>
+              <li><strong>Freelance:</strong> Proyectos independientes</li>
+              <li><strong>Emprendimiento:</strong> Startup propia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>IESTP SAM</h4>
+            <p>Instituto de Educación Superior Tecnológico Público SAM</p>
+            <p>Formando profesionales técnicos para el futuro digital</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Programa de Estudios</h4>
+            <a href="#programa">Información del Programa</a>
+            <a href="#competencias">Competencias</a>
+            <a href="#modulos">Módulos Formativos</a>
+            <a href="#oportunidades">Oportunidades</a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>📍 Dirección del Instituto</p>
+            <p>📞 Teléfono de contacto</p>
+            <p>✉️ Email institucional</p>
+            <p>🌐 Sitio web oficial</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 IESTP SAM - Todos los derechos reservados | Diseño y
+            Programación Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botón flotante futurista -->
+    <div class="boton-flotante-container">
+      <!-- Checkbox oculto que activa el menú -->
+      <input type="checkbox" id="menu-toggle" hidden />
+      <label for="menu-toggle" class="boton-flotante">✦</label>
+
+      <!-- Opciones del botón -->
+      <div class="menu-opciones">
+        <a href="off1.html" class="opcion">🍀 suerte</a>
+        <a href="off2.html" class="opcion">💬 frase</a>
+      </div>
+    </div>
+
+    <!-- Partículas -->
+    <div class="particulasmax"></div>
+    <canvas id="canvas-particulas"></canvas>
+
+    <script src="ind.js"></script>
+    <script src="part.js"></script>
+
+  </body>
+</html>
