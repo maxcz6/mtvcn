@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -279,4 +280,287 @@
     }
   }
     </script>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Motivacional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(0,0,0,0.7);
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .motivational-quote {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            font-style: italic;
+            color: #f9d923;
+        }
+        button {
+            background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+            color: #222;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #ffd200 0%, #f7971e 100%);
+            transform: scale(1.05);
+        }
+        .result {
+            margin-top: 25px;
+            font-size: 1.3rem;
+            color: #fff;
+            font-weight: bold;
+            min-height: 40px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 10px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+/* Navbar styles - responsive and integrated */
+.navbar-1 {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(15, 23, 42, 0.92);
+    box-shadow: 0 2px 8px rgba(79,172,254,0.08);
+    padding: 0.5rem 0;
+    backdrop-filter: blur(8px);
+    transition: background 0.3s;
+}
+.navbar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 44px;
+    background: rgba(79, 172, 254, 0.12);
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(79,172,254,0.08);
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s;
+    font-family: inherit;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 64px;
+    height: 36px;
+    background: #e0e0e0; /* gris claro cuando está desactivado */
+    border-radius: 24px;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), background 0.3s;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(79,172,254,0.15);
+}
+.switch input:checked + .slider {
+    background: linear-gradient(135deg, #a855f7 0%, #00f2fe 100%);
+}
+.switch input:not(:checked) + .slider {
+    background: #e0e0e0; /* sin color cuando está desactivado */
+}
+.option {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4facfe;
+    z-index: 3;
+    transition: color 0.3s, opacity 0.3s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+    user-select: none;
+}
+.option-left {
+    left: 0;
+    color: #22c55e;
+}
+.option-right {
+    right: 0;
+    color: #a855f7;
+}
+.switch input:checked ~ .option-left {
+    color: #4facfe;
+    opacity: 0.7;
+}
+.switch input:checked ~ .option-right {
+    color: #22c55e;
+    opacity: 1;
+}
+.switch input:not(:checked) ~ .option-left {
+    color: #22c55e;
+    opacity: 1;
+}
+.switch input:not(:checked) ~ .option-right {
+    color: #a855f7;
+    opacity: 0.7;
+}
+
+/* Responsive adjustments for navbar */
+@media (max-width: 768px) {
+    .navbar-1 {
+        padding: 0.25rem 0;
+    }
+    .switch {
+        width: 110px;
+        height: 36px;
+    }
+    .slider {
+        width: 48px;
+        height: 28px;
+        top: 4px;
+        left: 4px;
+    }
+    .switch input:checked + .slider {
+        transform: translateX(54px);
+    }
+    .switch input:not(:checked) + .slider {
+        background: #e0e0e0;
+    }
+    .option {
+        font-size: 0.92rem;
+    }
+    body {
+        padding-top: 3.2rem;
+    }
+}
+@media (max-width: 480px) {
+    .navbar-1 {
+        padding: 0.15rem 0;
+    }
+    .switch {
+        width: 90px;
+        height: 28px;
+    }
+    .slider {
+        width: 36px;
+        height: 20px;
+        top: 4px;
+        left: 4px;
+    }
+    .switch input:checked + .slider {
+        transform: translateX(38px);
+    }
+    .switch input:not(:checked) + .slider {
+        background: #e0e0e0;
+    }
+    .option {
+        font-size: 0.85rem;
+    }
+    body {
+        padding-top: 2.2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="navbar-1">
+  <nav class="navbar-toggle">
+    <label class="switch">
+      <input type="checkbox" id="navSwitch" onchange="toggleNav()">
+      <span class="slider"></span>
+      <span class="option option-left"> frase</span>
+      <br style="padding: 30px;">
+      <span class="option option-right">suerte</span>
+    </label>
+  </nav>
+</div>
+    <div class="container">
+        <h1>¡Hoy es tu día!</h1>
+        <div class="motivational-quote" id="quote">
+            "El único límite para alcanzar tus sueños eres tú mismo."
+        </div>
+        <form id="motivationalForm">
+            <label for="nombre">¿Cómo te llamas?</label><br>
+            <input type="text" id="nombre" name="nombre" required style="padding:10px; border-radius:8px; border:none; margin-top:10px; width:80%;"><br>
+            <button type="submit">Motívame</button>
+        </form>
+        <div class="result" id="resultado"></div>
+    </div>
+    <script>
+        const frases = [
+            "¡Cree en ti y todo será posible!",
+            "Cada día es una nueva oportunidad para brillar.",
+            "El esfuerzo de hoy es el éxito de mañana.",
+            "Nunca te rindas, lo mejor está por venir.",
+            "Tu actitud determina tu altitud.",
+            "Hazlo con pasión o no lo hagas."
+        ];
+
+        document.getElementById('motivationalForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value.trim();
+            const frase = frases[Math.floor(Math.random() * frases.length)];
+            document.getElementById('resultado').textContent = `¡${nombre}, ${frase}`;
+            // Cambia la cita motivacional superior también
+            document.getElementById('quote').textContent = frase;
+        });
+        // menu navvar
+  function toggleNav() {
+    const checked = document.getElementById('navSwitch').checked;
+    if (checked) {
+      window.location.href = "index.html";
+    } else {
+      window.location.href = "off2.html";
+    }
+  }
+    </script>
+>>>>>>> 38dc28af4f235b1f15772e8939acc556b7453a30
 </body>
