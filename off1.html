@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code & Design Studio</title>
+  <link rel="stylesheet" href="off1.css">
+    <link rel="stylesheet" href="navvar.css">
+</head>
+
+<body>
+<div class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><h1>Diseño y Programación SAM</h1></a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="off1.html" class="nav-link"> suerte</a>
+                </li>
+                <li class="nav-item">
+                    <a href="off2.html" class="nav-link">frase</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+  <div class="floating-elements">
+    <div class="code-symbol">&lt;/&gt;</div>
+    <div class="code-symbol">{ }</div>
+    <div class="code-symbol">⚡</div>
+    <div class="code-symbol">🎨</div>
+  </div>
+
+  <div class="header-container">
+    <h1>"Mientras no tengas éxito, inténtalo de nuevo"</h1>
+    <p class="subtitle">Cada línea de código es un paso hacia la excelencia digital</p>
+    <div class="tech-stack">
+      <span class="tech-badge">HTML5</span>
+      <span class="tech-badge">CSS3</span>
+      <span class="tech-badge">JavaScript</span>
+      <span class="tech-badge">MYsql</span>
+      <span class="tech-badge">UI/UX</span>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button onclick="simular()" id="mainButton">
+      ¡Pulsa y Sigue Intentando!
+    </button>
+  </div>
+
+  <div id="output"></div>
+
+  <script>
+    function intentar() {
+      return Math.floor(Math.random() * 12) + 1 > 9;
+    }
+
+    function simular() {
+      const button = document.getElementById('mainButton');
+      const output = document.getElementById('output');
+
+      // Disable button and show loading state
+      button.disabled = true;
+      button.classList.add('loading');
+      button.textContent = 'Intentando...';
+
+      let exito = false;
+      let intentos = 0;
+      let resultado = '';
+
+      // Terminal header
+      const terminalHeader = `<div class="terminal-header">
+        <div class="terminal-dots">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot green"></div>
+        </div>
+        <div class="terminal-title">terminal@dev-studio</div>
+      </div>`;
+
+      const processMessages = [
+        '🔧 Compilando componentes...',
+        '⚙️ Optimizando assets...',
+        '🚀 Ejecutando tests...',
+        '📦 Empaquetando módulos...',
+        '🔍 Validando sintaxis...',
+        '🔍 Consultando con Dios...',
+        '🎨 Aplicando estilos...'
+      ];
+
+      const processAttempt = () => {
+        intentos++;
+        const randomMessage = processMessages[Math.floor(Math.random() * processMessages.length)];
+        resultado += `<span class="attempt-line">Build #${intentos.toString().padStart(3, '0')}: ${randomMessage}</span>\n`;
+
+        // Add process line
+        if (intentos % 3 === 0) {
+          resultado += `<span class="process-line">→ Analizando dependencias...</span>\n`;
+        }
+
+        // Update output in real-time
+        output.innerHTML = terminalHeader + resultado.split('\n').join('<br>');
+        output.classList.add('show');
+
+        exito = intentar();
+
+        if (!exito && intentos < 40) {
+          setTimeout(processAttempt, 150);
+        } else {
+          // Final result
+          resultado += `\n<span class="success-line">✅ ¡Escaneo exitoso en ${intentos} intentos! 🚀</span>\n`;
+          resultado += `<span class="process-line">→ URL: https://Diosito </span>`;
+
+          output.innerHTML = terminalHeader + resultado.split('\n').join('<br>');
+
+          // Re-enable button
+          button.disabled = false;
+          button.classList.remove('loading');
+          button.textContent = '¡Pulsa y Sigue Intentando!';
+        }
+      };
+
+      // Clear previous results
+      output.innerHTML = '';
+      output.classList.remove('show');
+
+      // Start processing
+      setTimeout(processAttempt, 300);
+    }
+
+    // menu navbar
+    function toggleNav() {
+      const checked = document.getElementById('navSwitch').checked;
+      if (checked) {
+        window.location.href = "off2.html";
+      } else {
+        window.location.href = "off1.html";
+      }
+    }
+    const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace (móvil)
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+  </script>
+</body>
+
+</html>
